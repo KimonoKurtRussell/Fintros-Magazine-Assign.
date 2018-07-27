@@ -17,5 +17,15 @@
 //= require jquery
 //= require bootstrap
 //= require masonry/jquery.masonry
+//= require moment
 
+(function() {
+ 'use strict';
+
+  $(document).ready(function() {
+    $('.timestring').each(function() {
+      this.textContent = moment(this.textContent).format('MMM Do YYYY');
+    });
+  });
+})();
 

@@ -1,20 +1,35 @@
+<div class="form">
 <%= form_for(@article) do |f| %>
-  <%= f.label :article_Title %>
-  <%= f.text_field :title %>
 
-  <%= f.label :author %>
-  <%= f.text_field :author%>
+  <div class="form-input-field">
+  <%= f.text_field :title, value: "Article Title" %>
+  </div>
 
-  <%= f.label :tagline %>
-  <%= f.text_field :tagline %>
 
-  <%= f.label :post %>
-  <%= f.text_field :post %>
+  <div class="form-input-field">
+  <%= f.text_field :author, value: "Author" %>
+  </div>
 
-  <div class="field">
+
+  <div class="form-input-field">
+  <%= f.text_field :tagline, value: "Tagline" %>
+  </div>
+
+
+  <div class="form-input-field-post">
+  <%= f.text_area :post, value: "Content for Post", class: "form-input-field-post1" %>
+ </div>
+  <div class="image-field">
     add an image....
+      </div>
+
+    <div class="image-select">
     <%= f.file_field :image %>
   </div>
 
+  <br></br>
+ <div class="form-button">
   <%= f.submit %>
+ </div>
 <% end %>
+</div>
