@@ -1,29 +1,25 @@
 <div class="article-header">
-<h5>Fintros</h5>
-<h1>Magazine</h1>
-<h3>Strategies And Stories To Help You In Your Job Search</h3>
+ <h5>Fintros</h5>
+  <h1>Magazine</h1>
+   <h3>Strategies And Stories To Help You In Your Job Search</h3>
 </div>
-
-
-<div class="row masonry-container">
-<% @articles.each do |article| %>
-
-     <div class="box col-md-6">
-
-      <div class="image">
-     <%= link_to article_path(article) do %>
-    <%= image_tag article.image.url%>
-    <%end%>
+ <div class="row masonry-container">
+  <% @articles.each do |article| %>
+   <div class="box col-md-6">
+     <div class="image">
+      <%= link_to article_path(article) do %>
+       <%= image_tag article.image.url%>
+  <%end%>
 </div>
-
-      <div class="content">
-      <h1><%= article.title %></h1>
-      <h4><%= article.tagline %></h4>
-     </div>
-   </div>
+  <div class="content">
+    <h1><%= article.title %></h1>
+     <h4><%= article.tagline %></h4>
+  </div>
+</div>
   <% end %>
 </div>
 
- <div id="myModal"></div>
+
+<div id="myModal"></div>
 
 

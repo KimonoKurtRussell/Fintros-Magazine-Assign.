@@ -1,34 +1,29 @@
-
 <div class="show">
-<div class="image-show">
-<%= image_tag @article.image.url%>
-</div>
-<h1>
-  <%= @article.title %>
-</h1>
-<%= link_to "EDIT", edit_article_path, remote: true %> |
-<%= link_to 'DELETE', article_path(@article),
+ <div class="image-show">
+  <%= image_tag @article.image.url%>
+ </div>
+  <h1>
+   <%= @article.title %>
+  </h1>
+   <%= link_to "EDIT", edit_article_path, remote: true %> |
+   <%= link_to 'DELETE', article_path(@article),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
+   <div class="info">
+    <h3>
+     BY <%= @article.author %>
+    </h3>
+     <h3 class="timestring">
+      <%= @article.created_at %>
+     </h3>
+   </div>
+    <div class="post">
+     <h4>
+      <%= @article.post %>
+     </h4>
+   </div>
+ </div>
 
-<div class="info">
-<h3>
-   BY <%= @article.author %>
-</h3>
-
-<h3 class="timestring">
-  <%= @article.created_at %>
-</h3>
-</div>
-<div class="post">
-<h4>
-  <%= @article.post %>
-</h4>
-</div>
-</div>
-
-
-
-
+ßß
 
 <div id="myModal"></div>
